@@ -14,6 +14,6 @@ func TestEmptyLogHandler(t *testing.T) {
 		WithAttrs(nil).
 		WithGroup("group")
 
-	assert.Check(t, !handler.Enabled(nil, 0))
-	assert.NilError(t, handler.Handle(nil, slog.Record{}))
+	assert.Check(t, !handler.Enabled(nil, 0))              //lint:ignore SA1012 intentional nil
+	assert.NilError(t, handler.Handle(nil, slog.Record{})) //lint:ignore SA1012 intentional nil
 }

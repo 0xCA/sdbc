@@ -54,7 +54,7 @@ func TestClientReadContextNil(t *testing.T) {
 
 	client := &Client{}
 
-	_, err := client.read(nil)
+	_, err := client.read(nil) //lint:ignore SA1012 intentional nil
 	assert.Check(t, errors.Is(err, ErrContextNil))
 }
 

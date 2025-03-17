@@ -12,28 +12,28 @@ import (
 const (
 	// CBORTagNone represents a NONE value.
 	// The value passed to the tagged value is null, as it cannot be empty.
-	CBORTagNone = 6
+	CBORTagNone uint64 = 6
 
 	// cborTagTable represents a table name as a string.
-	cborTagTable = 7
+	cborTagTable uint64 = 7
 
 	// cborTagRecordID represents a RecordID as a two-value array, containing
 	// a table part (string) and an id part (string, number, object or array).
-	cborTagRecordID = 8
+	cborTagRecordID uint64 = 8
 
 	// cborTagDecimal represents a Decimal in a string format.
-	cborTagDecimal = 10
+	cborTagDecimal uint64 = 10
 
 	// cborTagDatetime represents a DateTime as a two-value array,
 	// containing seconds (number) and optionally nanoseconds (number).
 	// It is preferred by SurrealDB over the standard IANA tag 0.
-	cborTagDatetime = 12
+	cborTagDatetime uint64 = 12
 
 	// cborTagDuration represents a Duration as a two-value array, containing
 	// optionally seconds (number) and optionally nanoseconds (number).
 	// An empty array will be considered a Duration of 0.
 	// It is used instead of custom tag 13 (string representation).
-	cborTagDuration = 14
+	cborTagDuration uint64 = 14
 
 	// CBORTagUUID represents a UUID in binary form.
 	// It is adopted from the IANA specification.
@@ -43,7 +43,7 @@ const (
 	// This decision was made to minimize the number of dependencies.
 	// There is no UUID type in the standard library.
 	// As a third-party package, github.com/google/uuid is recommended.
-	CBORTagUUID = 37
+	CBORTagUUID uint64 = 37
 
 	// Custom Geometries:.
 
